@@ -12,4 +12,12 @@ function generateRandomAlphabet(){
 function addBackGroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-500')
+};
+function removeBAckGroundColorById(elementId){
+ const element = document.getElementById(elementId);
+ element.classList.remove('bg-orange-500')
+}
+function setElementValuByTd(elementId,value){
+    const element=document.getElementById(elementId);
+    element.innerText=value;
 }
