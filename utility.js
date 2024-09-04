@@ -21,3 +21,10 @@ function setElementValuByTd(elementId,value){
     const element=document.getElementById(elementId);
     element.innerText=value;
 }
+function getTextElementValueById(elementId){
+    const scoreElement = document.getElementById(elementId);
+    const currentscoreText= scoreElement.innerText;
+    const currentscore=parseInt(currentscoreText);
+    return currentscore
+   
+}
