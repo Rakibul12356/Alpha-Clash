@@ -15,10 +15,11 @@ function playGroundScore(){
     //Show the Play Ground section
     const showPlayGround = document.getElementById('final-score');
     showPlayGround.classList.remove('hidden');
-    continueGame();
+    const lastScore = getTextElementValueById('current-score');
+    console.log(lastScore);
+    setElementValuByTd('gameover-score',lastScore)
     
 }
-
 function playAgainButton(){
     //step-1 Hide the Home Screen
     const hideHome = document.getElementById('final-score');
@@ -29,11 +30,7 @@ function playAgainButton(){
     continueGame();
     setElementValuByTd('current-life',5);
     setElementValuByTd('current-score',0);
-    
 }
-
-
-
 //KeyBoard play section start
 function handleKeyboardButtonpress(event){
     const playerPressed=event.key;
@@ -42,7 +39,6 @@ function handleKeyboardButtonpress(event){
    // console.log(currentAlphabetElement.innerText);
     const currentAlphabet=currentAlphabetElement.innerText
     const expectedAlphabet=currentAlphabet.toLowerCase();
-
     //cheacked match or not
     if(playerPressed === expectedAlphabet){
         console.log('you win');
@@ -78,7 +74,5 @@ function continueGame(){
     const currentAlphabet=document.getElementById('currunt-alphabet');
     currentAlphabet.innerText=alphabet;
     //set background color
-
-
     addBackGroundColorById(alphabet);
 }
